@@ -21,9 +21,36 @@
 		"section": "Charm Notches",
 		"items": [
 			{
-				"location": "Buy from Salubra",
-				"requirements": "120 Geo + have 5 charms",
-				"percentage": "0%"
+				"location": "Buy from Salubra (Forgotten Crossroads)",
+				"requirements": "120 Geo and obtain 5 charms"
+			},
+			{
+				"location": "Buy from Salubra (Forgotten Crossroads)",
+				"requirements": "500 Geo and obtain 10 charms"
+			},
+			{
+				"location": "Buy from Salubra (Forgotten Crossroads)",
+				"requirements": "900 Geo and obtain 18 charms"
+			},
+			{
+				"location": "Buy from Salubra (Forgotten Crossroads)",
+				"requirements": "1400 Geo and obtain 25 charms"
+			},
+			{
+				"location": "Hidden area north-east of Cornifer in Fog Canyon",
+				"requirements": "Isma's Tear or Monarch Wings"
+			},
+			{
+				"location": "Fungal Wastes",
+				"requirements": "Defeat 2 Shumal Ogres"
+			},
+			{
+				"location": "Colosseum of Fools (Kingdom's Edge)",
+				"requirements" : "Complete the Trial of the Warrior"
+			},
+			{
+				"location": "Grimm Troupe tent (Dirtmouth)",
+				"requirements": "Defeat Grimm"
 			}
 		],
 		"description": "Allows you to equip more charms."
@@ -64,7 +91,47 @@
 				"location": "Greenpath",
 				"requirements": "Defeat Hornet",
 				"percentage": "2%"
+			},
+			{
+				"name": "Mantis Claw",
+				"location": "Mantis Village (Fungal Wastes)",
+				"percentage": "2%"
+			},
+			{
+				"name": "Crystal Heart",
+				"location": "Crystal Peak",
+				"percentage": "2%"
+			},
+			{
+				"name": "Monarch Wings",
+				"location": "Ancient Basin",
+				"requirements": "Obtain Crystal Heart and defeat Broken Vessel",
+				"percentage": "2%"
+			},
+			{
+				"name": "Isma's Tear",
+				"location": "Isma's Grove (Royal Waterways)",
+				"requirements": "Obtain Crystal Heart and defeat Dung Defender",
+				"percentage": "2%"
+			},
+			{
+				"name": "Shade Cloak",
+				"location": "Farthest east room in The Abyss",
+				"percentage": "2%"
+			},
+			{
+				"name": "King's Brand",
+				"location": "Cast-Off Shell (Kingdom's Edge)",
+				"requirements": "Obtain Monarch Wings and defeat Hornet",
+				"percentage": "2%"
+			},
+			{
+				"name": "Godtuner",
+				"location": "Junk Pit (Royal Waterways)",
+				"requirements": "Use a Simple Key on the Godseeker's coffin",
+				"percentage": "1%"
 			}
+				
 		],
 		"description": "The various upgrades to your movement abilities"
 	},
@@ -72,11 +139,41 @@
 		"section": "Spells",
 		"items": [
 			{
+				"name": "Vegeful Spirit",
+				"location": "Given by Snail Shaman in Ancestral Mound (Forgotten Crossroads)",
+				"requirements": "Defeat False Knight",
+				"percentage": "1%"
+			},
+			{
 				"name": "Desolate Dive",
-				"location": "Crystal Peak",
-				"requirements": "Obtain Descending Dark",
+				"location": "Soul Sanctum",
+				"requirements": "Defeat Soul Master",
+				"percentage": "1%"
+			},
+			{
+				"name": "Howling Wraiths",
+				"location": "Overgrown Mound (Fog Canyon)",
+				"percentage": "1%"
+			},
+			{
+				"name": "Shade Soul",
+				"location": "Soul Sanctum (City of Tears)",
+				"requirements": "Obtain Vegeful Spirit and buy Elegant Key from Sly in Dirtmouth",
+				"percentage": "1%"
+			},
+			{
+				"name": "Descending Dark",
+				"location": "Crystallised Mound (Crystal Peak)",
+				"requirements": "Obtain Desolate Dive",
+				"percentage": "1%"
+			},
+			{
+				"name": "Abyss Shriek",
+				"location": "South-western most room in The Abyss",
+				"requirements": "Use Howling Wraiths on the pedestal",
 				"percentage": "1%"
 			}
+				
 		],
 		"description": "Alternate ways of taking down foes. Uses soul."
 	},
@@ -84,8 +181,80 @@
 		"section": "Masks",
 		"items": [
 			{
-				"location": "Buy from Sly",
+				"location": "Buy from Sly (Dirtmouth)",
+				"requirements": "150 Geo",
+				"percentage": ".25%"
+			},
+			{
+				"location": "Buy from Sly (Dirtmouth)",
 				"requirements": "500 Geo",
+				"percentage": ".25%"
+			},
+			{
+				"location": "Buy from Sly (Dirtmouth)",
+				"requirements": "800 Geo",
+				"percentage": ".25%"
+			},
+			{
+				"location": "Buy from Sly (Dirtmouth)",
+				"requirements": "1500 Geo",
+				"percentage": ".25%"
+			},
+			{
+				"location": "West of Ancestral Mound in Forgotten Crossroads",
+				"requirements": "Defeat Brooding Mawlek",
+				"percentage": ".25%"
+			},
+			{
+				"location": "Given by Grubfather (Forgotten Crossroads)",
+				"requirements": "Rescue 5 grubs",
+				"percentage": ".25%"
+			},
+			{
+				"location": "South of Hot Springs in Forgotten Crossroads",
+				"percentage": ".25%"
+			},
+			{
+				"location": "Queen's Station (Fungal Wastes)",
+				"requirements": "Mantis Claw",
+				"percentage": ".25%"
+			},
+			{
+				"location": "Bretta's House (Dirtmouth)",
+				"requirements": "Rescue Bretta in Fungal Wastes",
+				"percentage": ".25%"
+			},
+			{
+				"location": "To the right of No Eyes' room in Stone Sanctuary (Greenpath)",
+				"percentage": ".25%"
+			},
+			{
+				"location": "North-West section of Royal Waterways beneath main path",
+				"percentage": ".25%"
+			},
+			{
+				"location": "Drop through Fungal Core into Deepnest",
+				"requirements": "Monarch Wings",
+				"percentage": ".25%"
+			},
+			{
+				"location": "Defeat Enraged Guardian (Crystal Peak)",
+				"requirements": "Monarch Wings",
+				"percentage": ".25%"
+			},
+			{
+				"location": "The Hive (Kingdom's Edge)",
+				"requirements": "Make a Hive Guardian break the wall",
+				"percentage": ".25%"
+			},
+			{
+				"location": "Given by the Seer (Resting Grounds)",
+				"requirements": "Collect 1500 essence",
+				"percentage": ".25%"
+			},
+			{
+				"location": "Given by Grey Mourner (Resting Grounds)",
+				"requirements": "Deliver Delicate Flower to the grave of the Traitor Child (Queens' Path)",
 				"percentage": ".25%"
 			}
 		],
@@ -95,8 +264,45 @@
 		"section": "Soul Vessels",
 		"items": [
 			{
-				"location": "Buy from Sly",
-				"requirements": "250 Geo",
+				"location": "Buy from Sly (Dirtmouth)",
+				"requirements": "550 Geo",
+				"percentage": ".33%"
+			},
+			{
+				"location": "Buy from Sly (Dirtmouth)",
+				"requirements": "900 Geo",
+				"percentage": ".33%"
+			},
+			{
+				"location": "Southern-most room in Greenpath near the entrance to Queen's Garden",
+				"percentage": ".33%"
+			},
+			{
+				"location": "Left of the lift in Forgotten Crossroads",
+				"requirements": "Unlocking the lift in City of Tears",
+				"percentage": ".33%"
+			},
+			{
+				"location": "Room next to the lift above King's Station (City of Tears)",
+				"percentage": ".33%"
+			},
+			{
+				"location": "Room north of the working tram in Deepnest",
+				"percentage": ".33%"
+			},
+			{
+				"location": "Stag Nest",
+				"requirements": "Open all Stag Stations",
+				"percentage": ".33%"
+			},
+			{
+				"location": "Given by the Seer (Resting Grounds)",
+				"requirements": "Collect 700 essence",
+				"percentage": ".33%"
+			},
+			{
+				"location": "Geo fountain in Ancient Basin",
+				"requirements": "3000 Geo",
 				"percentage": ".33%"
 			}
 		],
