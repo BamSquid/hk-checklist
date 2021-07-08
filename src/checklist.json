@@ -66,18 +66,18 @@
 				"location": "Buy from Leg Eater (Fungal Wastes)",
 				"requirements": "350 Geo (280 Geo with Defender's Crest equipped)",
 				"percentage": "1%",
-				"upgraded_name": "Unbreakable Heart",
-				"upgraded_location": "Buy from Divine (Grimm Troupe Tent in Dirtmouth)",
-				"upgraded_requirements": "Give Fragile Heart to Divine and buy back for 12000 Geo"
+				"alt_name": "Unbreakable Heart",
+				"alt_location": "Buy from Divine (Grimm Troupe Tent in Dirtmouth)",
+				"alt_requirements": "Give Fragile Heart to Divine and buy back for 12000 Geo"
 			},
 			{
 				"name": "Fragile Greed",
 				"location": "Buy from Leg Eater (Fungal Wastes)",
 				"requirements": "250 Geo (200 Geo with Defender's Crest equipped)",
 				"percentage": "1%",
-				"upgraded_name": "Unbreakable Greed",
-				"upgraded_location": "Buy from Divine (Grimm Troupe Tent in Dirtmouth)",
-				"upgraded_requirements": "Give Fragile Greed to Divine and buy back for 9000 Geo"
+				"alt_name": "Unbreakable Greed",
+				"alt_location": "Buy from Divine (Grimm Troupe Tent in Dirtmouth)",
+				"alt_requirements": "Give Fragile Greed to Divine and buy back for 9000 Geo"
 			},
 			{
 				"name": "Fragile Strength",
