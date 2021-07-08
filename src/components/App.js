@@ -1,4 +1,3 @@
-import logo from '../logo.svg';
 import './css/App.css';
 import Section from './Section.js'
 import checklist from '../checklist.json'
@@ -12,7 +11,6 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
         {sections}
       </header>
     </div>
