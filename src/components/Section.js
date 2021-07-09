@@ -14,13 +14,13 @@ class Section extends React.Component {
                     headings.push(keys[j]);
                 }
             }
-            listItems.push(<ListItem details={items[i]} headings={headings}/>);
+            listItems.push(<ListItem key={this.props.names + i} details={items[i]} headings={headings}/>);
         }
         return (
             <div>
                 <h1>{this.props.name}</h1>
                 <table>
-                    <TableHeader headings={headings}/>
+                    <TableHeader key={'table_' + this.props.names} headings={headings}/>
                     <tbody>
                         {listItems}
                     </tbody>
