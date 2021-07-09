@@ -10,7 +10,6 @@ class TableHeader extends React.Component {
         return (
             <thead>
             <tr>
-                <th></th>
                 {rows}
             </tr>
         </thead>
