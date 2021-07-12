@@ -475,6 +475,7 @@
 			{
 				"name": "Shade Cloak",
 				"location": "Farthest east room in The Abyss",
+				"requirements": "Obtain King's Brand to unlock access to The Abyss",
 				"percentage": "2"
 			},
 			{
@@ -719,6 +720,36 @@
 			}
 		],
 		"description": "Strengthens your nail"
+	},
+	{
+		"section": "Pale Ore",
+		"items": [
+			{
+				"location": "Given by the Seer (Resting Grounds)",
+				"requirements": "Collect 300 essence"
+			},
+			{
+				"location": "Hollownest's Crown (Crystal Peak)",
+				"requirements": "Obtain Monarch Wings, Mantis Claw, and Crystal Heart"
+			},
+			{
+				"location": "Behind a breakable wall in the room to the west of the Hot Springs in Deepnest",
+				"requirements": "Defeat Nosk"
+			},
+			{
+				"location": "Given by Grubfather",
+				"requirements": "Collect 31 Grubs"
+			},
+			{
+				"location": "Colosseum of Fools (Kingdom's Edge)",
+				"requirements": "Complete the Trial of the Conqueror"
+			},
+			{
+				"location": "West of the tram station in Ancient Basin",
+				"requirements": "Defeat two Lesser Mawleks"
+			}
+		],
+		"description": "Used to strengthen your nail"
 	},
 	{
 		"section": "Nail Arts",
