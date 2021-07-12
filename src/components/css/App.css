@@ -8,9 +8,19 @@
   padding-bottom: 25px;
 }
 
+h1 {
+  text-align: center;
+  cursor: pointer;
+}
+
 td {
   cursor: pointer;
-  border: solid black 1px;
+  border: solid white 1px;
+}
+
+.complete {
+  background: #ffd000;
+  color: black;
 }
 
 .footer {
@@ -22,4 +32,6 @@ td {
   color: white;
   text-align: left;
   height: 25px;
+  display: flex;
+  flex-direction: rows;
 }
