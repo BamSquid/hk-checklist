@@ -3,21 +3,21 @@ import React from "react";
 class ListItem extends React.Component {
   updatePercentage = (e) => {
     const clicked = e.target;
-    var parent = clicked.parentElement;
-    const isClicked = parent.getAttribute("data-clicked");
-    const percent = parseInt(parent.getAttribute("data-percent"), 10);
+    var tr = clicked.tagName.toLowerCase() === 'tr' ? clicked : clicked.parentElement;
+    const isClicked = tr.getAttribute("data-clicked");
+    const percent = parseInt(tr.getAttribute("data-percent"), 10);
     const border = isClicked === "true" ? "solid white 1px" : "solid black 1px";
     const background = isClicked === "true" ? "#282c34" : "white";
     const color = isClicked === "true" ? "white" : "black";
     const updateClicked = isClicked === "false" ? "true" : "false";
-    var children = parent.children;
+    var children = tr.children;
 
     for (var i = 0; i < children.length; i++) {
       children[i].style.border = border;
       children[i].style.background = background;
       children[i].style.color = color;
     }
-    parent.setAttribute("data-clicked", updateClicked);
+    tr.setAttribute("data-clicked", updateClicked);
 
     var total = document.getElementById("total-percent");
     var totalPercent = parseInt(total.getAttribute("data-percent"), 10);
