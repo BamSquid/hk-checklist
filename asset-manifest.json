@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/hk-checklist/static/css/main.135497ef.chunk.css",
-    "main.js": "/hk-checklist/static/js/main.e1a1c1fd.chunk.js",
-    "main.js.map": "/hk-checklist/static/js/main.e1a1c1fd.chunk.js.map",
+    "main.css": "/hk-checklist/static/css/main.921fffdf.chunk.css",
+    "main.js": "/hk-checklist/static/js/main.04a0a1fd.chunk.js",
+    "main.js.map": "/hk-checklist/static/js/main.04a0a1fd.chunk.js.map",
     "runtime-main.js": "/hk-checklist/static/js/runtime-main.050d7f25.js",
     "runtime-main.js.map": "/hk-checklist/static/js/runtime-main.050d7f25.js.map",
     "static/js/2.ffefd289.chunk.js": "/hk-checklist/static/js/2.ffefd289.chunk.js",
@@ -10,13 +10,13 @@
     "static/js/3.3c021104.chunk.js": "/hk-checklist/static/js/3.3c021104.chunk.js",
     "static/js/3.3c021104.chunk.js.map": "/hk-checklist/static/js/3.3c021104.chunk.js.map",
     "index.html": "/hk-checklist/index.html",
-    "static/css/main.135497ef.chunk.css.map": "/hk-checklist/static/css/main.135497ef.chunk.css.map",
+    "static/css/main.921fffdf.chunk.css.map": "/hk-checklist/static/css/main.921fffdf.chunk.css.map",
     "static/js/2.ffefd289.chunk.js.LICENSE.txt": "/hk-checklist/static/js/2.ffefd289.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.050d7f25.js",
     "static/js/2.ffefd289.chunk.js",
-    "static/css/main.135497ef.chunk.css",
-    "static/js/main.e1a1c1fd.chunk.js"
+    "static/css/main.921fffdf.chunk.css",
+    "static/js/main.04a0a1fd.chunk.js"
   ]
 }
