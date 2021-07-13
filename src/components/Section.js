@@ -60,6 +60,7 @@ class Section extends React.Component {
     return (
       <div>
         <h1
+        className="section-header"
         onClick={this.selectAll}
         data-click-dir='click'
         >
