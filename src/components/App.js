@@ -3,6 +3,31 @@ import Section from "./Section.js";
 import checklist from "../checklist.json";
 
 function App() {
+  function getCookie(cname) {
+    let name = cname + "=";
+    let decodedCookie = decodeURIComponent(document.cookie);
+    let ca = decodedCookie.split(';');
+    for(let i = 0; i <ca.length; i++) {
+      let c = ca[i];
+      while (c.charAt(0) === ' ') {
+        c = c.substring(1);
+      }
+      if (c.indexOf(name) === 0) {
+        return c.substring(name.length, c.length);
+      }
+    }
+    return "";
+  }
+
+  function setCookie(cname, cvalue, exdays) {
+    const d = new Date();
+    d.setTime(d.getTime() + (exdays*24*60*60*1000));
+    let expires = "expires="+ d.toUTCString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+  }
+
+  var cookie = getCookie('checklist');
+
   var sections = [];
   for (var i = 0; i < checklist.length; i++) {
     sections.push(
@@ -10,12 +35,16 @@ function App() {
         key={"section" + i}
         name={checklist[i].section}
         items={checklist[i].items}
+        cookie={cookie}
       />
     );
   }
   return (
     <div className="App">
-      <header className="App-header">{sections}</header>
+      <header className="App-header">
+      <h1>Hollow Knight Checklist</h1>
+      {sections}
+      </header>
       <div className="footer">
         <div
           id="total-percent"
