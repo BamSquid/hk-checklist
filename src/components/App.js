@@ -53,14 +53,14 @@ function App() {
           data-mask-percent="0"
           data-soul="0"
           data-soul-percent="0"
-          style={{'padding-inline-start': '15px', 'padding-inline-end': '15px'}}
+          style={{'paddingInlineStart': '15px', 'paddingInlineEnd': '15px'}}
         >
           Completion: 0%
         </div>
         <div
           id="total-notches"
           data-notches="3"
-          style={{'padding-inline-start': '40px', 'padding-inline-end': '40px'}}
+          style={{'paddingInlineStart': '40px', 'paddingInlineEnd': '40px'}}
         >
           Charm Notches: 3
         </div>
