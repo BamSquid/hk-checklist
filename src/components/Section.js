@@ -3,6 +3,15 @@ import ListItem from "./ListItem.js";
 import TableHeader from "./TableHeader";
 
 class Section extends React.Component {
+  constructor(props) {
+    super(props);
+    this.Section1 = React.createRef();
+  }
+
+  state = {
+    click: true
+  }
+
   convertToTitleCase = (title) => {
     title = title
       .split("_")
@@ -12,25 +21,18 @@ class Section extends React.Component {
   };
 
   selectAll = (e) => {
+    console.log(this.props.children)
+
     const sectionCheck = this.props.name.toLowerCase().replace(' ', '');
     const tbody = document.getElementById('tbody_' + sectionCheck);
     const children = tbody.children;
-    var clickDir = e.target.getAttribute('data-click-dir');
+    var clickDir = this.state.click;
+    const currentSection1 = this.Section1.current;
 
     for (var i = 0; i < children.length; i++) {
       var child = children[i];
-      if (clickDir === 'click') {
-        if (child.getAttribute('data-clicked') === 'false') {
-          child.click();
-        }
-        e.target.setAttribute('data-click-dir', 'unclick');
-      }
-      else {
-        if (child.getAttribute('data-clicked') === 'true') {
-          child.click();
-        }
-        e.target.setAttribute('data-click-dir', 'click');
-      }
+      child.click();
+      this.setState({click: !this.state.click})
     }
   };
 
@@ -39,6 +41,7 @@ class Section extends React.Component {
       table_headings = [],
       headings_details = [];
     var items = this.props.items;
+
     for (var i = 0; i < items.length; i++) {
       var keys = Object.keys(items[i]);
       for (var j = 0; j < keys.length; j++) {
@@ -51,6 +54,7 @@ class Section extends React.Component {
       listItems.push(
         <ListItem
           key={this.props.name.toLowerCase().replace(" ", "") + i}
+          ref={this.Section1}
           details={items[i]}
           headings={headings_details}
           section={this.props.name.toLowerCase()}

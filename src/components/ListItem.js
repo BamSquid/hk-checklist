@@ -1,34 +1,39 @@
 import React from "react";
 
 class ListItem extends React.Component {
+  state = {
+    checked: false
+  }
+
   updatePercentage = (e) => {
+    this.setState({checked: !this.state.checked})
+
     const clicked = e.target;
     var tr = clicked.tagName.toLowerCase() === 'tr' ? clicked : clicked.parentElement;
-    const isClicked = tr.getAttribute("data-clicked");
-    const percent = parseInt(tr.getAttribute("data-percent"), 10);
-    const border = isClicked === "true" ? "solid white 1px" : "solid black 1px";
-    const background = isClicked === "true" ? "#282c34" : "white";
-    const color = isClicked === "true" ? "white" : "black";
-    const updateClicked = isClicked === "false" ? "true" : "false";
-    var children = tr.children;
+    const isChecked = this.state.checked;
 
+    const percent = parseInt(tr.getAttribute("data-percent"), 10);
+    const border = isChecked ? "solid white 1px" : "solid black 1px";
+    const background = isChecked ? "#282c34" : "white";
+    const color = isChecked ? "white" : "black";
+
+    var children = tr.children;
     for (var i = 0; i < children.length; i++) {
       children[i].style.border = border;
       children[i].style.background = background;
       children[i].style.color = color;
     }
-    tr.setAttribute("data-clicked", updateClicked);
 
     var total = document.getElementById("total-percent");
     var totalPercent = parseInt(total.getAttribute("data-percent"), 10);
     if (!isNaN(percent)) {
-      totalPercent += updateClicked === "true" ? percent : percent * -1;
+      totalPercent += !isChecked ? percent : percent * -1;
     }
     else {
       var section = this.props.section;
       if (section === "masks") {
         var num_masks = parseInt(total.getAttribute("data-masks"), 10);
-        num_masks += updateClicked === "true" ? 1 : -1;
+        num_masks += !isChecked ? 1 : -1;
         total.setAttribute("data-masks", num_masks);
 
         const maskPercent = total.getAttribute("data-mask-percent");
@@ -44,7 +49,7 @@ class ListItem extends React.Component {
       }
       else if (section === "soul vessels") {
         var num_soul = parseInt(total.getAttribute("data-soul"), 10);
-        num_soul += updateClicked === "true" ? 1 : -1;
+        num_soul += !isChecked ? 1 : -1;
         total.setAttribute("data-soul", num_soul);
 
         const soulPercent = total.getAttribute("data-soul-percent");
@@ -61,7 +66,7 @@ class ListItem extends React.Component {
       else {
         var notchCounter = document.getElementById('total-notches');
         var numNotches = parseInt(notchCounter.getAttribute('data-notches'), 10);
-        numNotches += updateClicked === "true" ? 1 : -1;
+        numNotches += !isChecked ? 1 : -1;
         notchCounter.setAttribute('data-notches', numNotches);
         notchCounter.textContent = "Charm Notches: " + numNotches;
 
@@ -96,10 +101,10 @@ class ListItem extends React.Component {
       var data = details[heading];
       row.push(<td>{data}</td>);
     }
+
     return (
       <tr
         data-percent={details.percentage}
-        data-clicked={"false"}
         onClick={this.updatePercentage}
       >
         {row}
