@@ -242,7 +242,8 @@
 				"requirements": "Dream Nail and Mantis Claw",
 				"percentage": "1",
 				"alt_name": "Carefree Melody",
-				"alt_requirements": "Banish Grimm Troupe"
+				"alt_location": "Dirtmouth"
+				"alt_requirements": "Banish Grimm Troupe and talk to Nymm"
 			},
 			{
 				"name": "Kingsoul",
