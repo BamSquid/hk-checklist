@@ -215,7 +215,7 @@
 				"percentage": "1"
 			},
 			{
-				"name": "Naimaster's Glory",
+				"name": "Nailmaster's Glory",
 				"location": "Basement of Sly's shop (Dirtmouth)",
 				"requirements": "Obtain all 3 Nail Arts",
 				"percentage": "1"
@@ -436,7 +436,7 @@
 				"location": "Grimm Troupe Tent (Dirtmouth)",
 				"requirements": "Complete the ritual and have the Grimmchild charm equipped",
 				"percentage": "1",
-				"alternative": "This fight can be skipped by banishing the Grimm Troupe instead"
+				"alternative": "Can be skipped by banishing the Grimm Troupe instead"
 			}
 		],
 		"description": "Wandering warriors whose spirits still linger"
