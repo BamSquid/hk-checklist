@@ -3,13 +3,22 @@ import ListItem from "./ListItem.js";
 import TableHeader from "./TableHeader";
 
 class Section extends React.Component {
-  constructor(props) {
-    super(props);
-    this.Section1 = React.createRef();
+  state = {
+    click: true,
+    checked: {}
+  };
+
+  componentDidUpdate() {
+    var sectionState = {};
+    sectionState[this.props.name.toLowerCase().replace(' ', '')] = this.state.checked;
+    this.props.updateState(sectionState);
   }
 
-  state = {
-    click: true
+  handleChange = (data) => {
+    var key = Object.keys(data);
+    var state = this.state.checked;
+    state[key] = data[key];
+    this.setState({checked: state});
   }
 
   convertToTitleCase = (title) => {
@@ -21,20 +30,39 @@ class Section extends React.Component {
   };
 
   selectAll = (e) => {
-    console.log(this.props.children)
-
-    const sectionCheck = this.props.name.toLowerCase().replace(' ', '');
-    const tbody = document.getElementById('tbody_' + sectionCheck);
+    const sectionCheck = this.props.name.toLowerCase().replace(" ", "");
+    const tbody = document.getElementById("tbody_" + sectionCheck);
     const children = tbody.children;
     var clickDir = this.state.click;
-    const currentSection1 = this.Section1.current;
 
     for (var i = 0; i < children.length; i++) {
       var child = children[i];
-      child.click();
-      this.setState({click: !this.state.click})
+      var id = child.getAttribute('id');
+      var childState = this.state.checked[id];
+      
+      if (clickDir) {
+        if (!childState) {
+          child.click();
+        }
+      }
+      else {
+        if (childState) {
+          child.click();
+        }
+      }
+      this.setState({ click: !this.state.click });
     }
   };
+
+  componentDidMount() {
+    var itemCount = this.props.items.length;
+    for (var i = 0; i < itemCount; i++) {
+      var checked = this.state.checked;
+      var name = this.props.name.toLowerCase().replace(" ", "") + i;
+      checked[name] = false;
+      this.setState({ checked: checked });
+    }
+  }
 
   render() {
     var listItems = [],
@@ -51,32 +79,40 @@ class Section extends React.Component {
           headings_details.push(keys[j]);
         }
       }
+      var name = this.props.name.toLowerCase();
       listItems.push(
         <ListItem
-          key={this.props.name.toLowerCase().replace(" ", "") + i}
-          ref={this.Section1}
+          key={name.replace(' ', '') + i}
+          id={name.replace(' ', '') + i}
           details={items[i]}
           headings={headings_details}
-          section={this.props.name.toLowerCase()}
+          section={name}
+          onChange={this.handleChange}
         />
       );
     }
     return (
       <div>
-        <h1
-        className="section-header"
-        onClick={this.selectAll}
-        data-click-dir='click'
-        >
-          {this.props.name}
-        </h1>
-        <table>
-          <TableHeader
-            key={"table_" + this.props.name.toLowerCase().replace(" ", "")}
-            headings={table_headings}
-          />
-          <tbody id={'tbody_' + this.props.name.toLowerCase().replace(' ', '')}>{listItems}</tbody>
-        </table>
+        <header className='App-header'>
+          <h1
+            className="section-header"
+            onClick={this.selectAll}
+            data-click-dir="click"
+          >
+            {this.props.name}
+          </h1>
+        </header>
+        <div className='section'>
+          <table>
+            <TableHeader
+              key={"table_" + this.props.name.toLowerCase().replace(" ", "")}
+              headings={table_headings}
+            />
+            <tbody id={"tbody_" + this.props.name.toLowerCase().replace(" ", "")}>
+              {listItems}
+            </tbody>
+          </table>
+        </div>
       </div>
     );
   }
