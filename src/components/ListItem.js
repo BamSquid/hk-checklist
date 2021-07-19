@@ -63,7 +63,7 @@ class ListItem extends React.Component {
           total.setAttribute("data-soul-percent", soulCount);
         }
       }
-      else {
+      else if (section === "charm notches") {
         var notchCounter = document.getElementById('total-notches');
         var numNotches = parseInt(notchCounter.getAttribute('data-notches'), 10);
         numNotches += !isChecked ? 1 : -1;
