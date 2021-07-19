@@ -22,6 +22,12 @@ body {
 .section {
   overflow-x: scroll;
   background-color: #282c34;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.section::-webkit-scrollbar {
+  display: none;
 }
 
 .section-header {
