@@ -59,7 +59,19 @@ class Section extends React.Component {
     for (var i = 0; i < itemCount; i++) {
       var checked = this.state.checked;
       var name = this.props.name.toLowerCase().replace(" ", "") + i;
-      checked[name] = false;
+
+      if (this.props.states !== undefined) {
+        checked[name] = this.props.states[name];
+      }
+      else {
+        checked[name] = false;
+      }
+
+      var row = document.getElementById(name)
+      if (checked[name]) {
+        row.click();
+      }
+
       this.setState({ checked: checked });
     }
   }

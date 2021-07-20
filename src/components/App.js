@@ -27,9 +27,6 @@ function App() {
     document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
   }
 
-  var cookie = getCookie('checklist');
-  var states = {};
-
   function handleChange(data) {
     var key = Object.keys(data);
     states[key] = data[key];
@@ -37,18 +34,27 @@ function App() {
     setCookie('checklist', forCookie, 10);
   }
 
+  var states = {};
+  var cookie = getCookie('checklist');
+  if (cookie !== '') {
+    states = JSON.parse(cookie);
+  }
+
   var sections = [];
   for (var i = 0; i < checklist.length; i++) {
+    var sectionName = checklist[i].section.toLocaleLowerCase().replace(' ', '');
+
     sections.push(
       <Section
         key={"section" + i}
         name={checklist[i].section}
         items={checklist[i].items}
         updateState={handleChange}
-        cookie={cookie}
+        states={states[sectionName]}
       />
     );
   }
+
   return (
     <div className="App">
       <header className="App-header">
