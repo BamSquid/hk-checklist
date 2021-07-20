@@ -5,7 +5,7 @@ class TableHeader extends React.Component {
     var headings = this.props.headings;
     var rows = [];
     for (var i = 0; i < headings.length; i++) {
-      rows.push(<th>{headings[i]}</th>);
+      rows.push(<th key={'header_' + headings[i].toLowerCase().replace(' ', '')}>{headings[i]}</th>);
     }
     return (
       <thead>
