@@ -89,7 +89,7 @@ class ListItem extends React.Component {
     for (var i = 0; i < headings.length; i++) {
       var heading = headings[i];
       var data = details[heading];
-      row.push(<td>{data}</td>);
+      row.push(<td key={'detail_' + data + i}>{data}</td>);
     }
 
     return (
