@@ -27,7 +27,7 @@ This app uses cookies. The only thing that is saved is the items that were check
   * Images to make things look fancier
   * A less terrible UI (kinda goes along with the first point)
   * Add Hunter's Journal
-  * Add locations for every relic (Wanderer's Journal, Hollownest Seal, King's Idol, and Arcane Egg)
+  * Add locations for every relic (Wanderer's Journal, Hallownest Seal, King's Idol, and Arcane Egg)
   * Silksong!
 
 # If you want to help out
