@@ -1,6 +1,7 @@
 import "./css/App.css";
 import Section from "./Section.js";
 import checklist from "../checklist.json";
+import CookieConsent from "react-cookie-consent";
 
 function App() {
   
@@ -83,6 +84,7 @@ function App() {
           Charm Notches: 3
         </div>
       </div>
+      <CookieConsent>This app uses cookies for saving your choices. No other information is collected from you.</CookieConsent>
     </div>
   );
 }
