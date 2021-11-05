@@ -25,7 +25,8 @@ class Section extends React.Component {
     title = title
       .split("_")
       .map((w) => w[0].toUpperCase() + w.substr(1).toLowerCase())
-      .join(" ");
+      .join(" ")
+      .replace("Hunters", "Hunter's");
     return title;
   };
 
@@ -100,12 +101,13 @@ class Section extends React.Component {
           headings={headings_details}
           section={name}
           onChange={this.handleChange}
+          type={this.props.type}
         />
       );
     }
     return (
       <div>
-        <header className='App-header'>
+        <header className={`App-header ${this.props.type}`}>
           <h1
             className="section-header"
             onClick={this.selectAll}
@@ -119,6 +121,7 @@ class Section extends React.Component {
             <TableHeader
               key={"table_" + this.props.name.toLowerCase().replace(" ", "")}
               headings={table_headings}
+              type={this.props.type}
             />
             <tbody id={"tbody_" + this.props.name.toLowerCase().replace(" ", "")}>
               {listItems}

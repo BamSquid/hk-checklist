@@ -8,7 +8,7 @@ class TableHeader extends React.Component {
       rows.push(<th key={'header_' + headings[i].toLowerCase().replace(' ', '')}>{headings[i]}</th>);
     }
     return (
-      <thead>
+      <thead className={`${this.props.type}`}>
         <tr>{rows}</tr>
       </thead>
     );
