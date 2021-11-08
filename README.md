@@ -26,7 +26,7 @@ This app uses cookies. The only thing that is saved is the items that were check
 # Future Additions
   * Images to make things look fancier
   * A less terrible UI (kinda goes along with the first point)
-  * Add Hunter's Journal
+  * ~~Add Hunter's Journal~~
   * Add locations for every relic (Wanderer's Journal, Hallownest Seal, King's Idol, and Arcane Egg)
   * Silksong!
 
@@ -39,3 +39,12 @@ This project was written in React. It uses React Components to display the data 
   * `ListItem` => Renders the row of each table with the data from the `items` array that is passed in by the `Section` component. This component also handles the logic for incrementing the counters when a row is clicked on.
 
 The data is stored in the file `src/checklist.json`. This file contains an array of objects with each element of the array being a separate section. Each element has `section`, `items`, and `description` (currently not in use) properties. `name` is the name of the section and `items` is an array that contains everything for that section (names, requirements, locations, etc). 
+
+# How to add a new checklist
+1. Create a new `.json` file in the `src` folder containing the information to track (keeping the same format as `checklist.json`)
+2. Create a new React Component in the `components` directory with the name of the new checklist
+3. In `App.js`, add a new `Link` containing the path for the URL along with the class for the checklist (for background color).
+4. In `App.js`, add a new `Route` with the path for the link
+5. Copy one of the existing checklist Components and change the info to match the new checklist (cookie name, heading name, footer content, etc.)
+6. In `components/css/App.css`, add a new entry with the checklist name as a class and include the background color associated with the new checklist
+7. In `ListItem.js` add another `if/else` block to add the logic for when an element in the new checklist is clicked.
